@@ -42,29 +42,29 @@ function App() {
   };
 
   return (
-    <AppContext.Provider
-      value={{ countProvided: count, dispatchProvided: dispatch }}
-    >
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          {/* <Basic1 /> */}
-          {/* <Basic2 /> */}
-          {/* <BasicUseEffect /> */}
-          {/* <TimerContainer /> */}
-          {/* <ApiFetch />
+    // <AppContext.Provider
+    //   value={{ countProvided: count, dispatchProvided: dispatch }}
+    // >
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        {/* <Basic1 /> */}
+        {/* <Basic2 /> */}
+        {/* <BasicUseEffect /> */}
+        {/* <TimerContainer /> */}
+        {/* <ApiFetch />
           <B /> */}
-          {/* <BasicReducer /> */}
-          {/* Count {count}
+        {/* <BasicReducer /> */}
+        {/* Count {count}
           <CompB /> */}
-          {/* <Memo /> */}
-          <CountDisplay name="count1" count={count1} />
-          <CountClick handleClick={AddCount1}>AddCount1</CountClick>
-          <CountDisplay name="count2" count={count2} />
-          <CountClick handleClick={AddCount2}>AddCount2</CountClick>
-        </header>
-      </div>
-    </AppContext.Provider>
+        {/* <Memo /> */}
+        <CountDisplay name="count1" count={count1} />
+        <CountClick handleClick={AddCount1}>AddCount1</CountClick>
+        <CountDisplay name="count2" count={count2} />
+        <CountClick handleClick={AddCount2}>AddCount2</CountClick>
+      </header>
+    </div>
+    // </AppContext.Provider>
   );
 }
 
