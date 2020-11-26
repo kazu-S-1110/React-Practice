@@ -9,37 +9,37 @@ import CompB from './components/CompB';
 // import Basic2 from './components/Basic2';
 // import BasicUseEffect from './components/BasicUseEffect';
 // import TimerContainer from './components/TimerContainer';
-import { useReducer, useState } from 'react';
+import { useReducer, useState, useCallback } from 'react';
 // import Memo from './components/Memo';
 import CountDisplay from './components/CountDisplay';
 import CountClick from './components/CountClick';
 
-// const initialState = 0;
-// const reducer = (currentState, action) => {
-//   switch (action) {
-//     case 'add_1':
-//       return currentState + 1;
-//     case 'multiple_3':
-//       return currentState * 3;
-//     case 'reset':
-//       return initialState;
-//     default:
-//       return currentState;
-//   }
-// };
+const initialState = 0;
+const reducer = (currentState, action) => {
+  switch (action) {
+    case 'add_1':
+      return currentState + 1;
+    case 'multiple_3':
+      return currentState * 3;
+    case 'reset':
+      return initialState;
+    default:
+      return currentState;
+  }
+};
 
 function App() {
-  // const [count, dispatch] = useReducer(reducer, initialState);
+  const [count, dispatch] = useReducer(reducer, initialState);
 
   const [count1, setCount1] = useState(0);
   const [count2, setCount2] = useState(0);
 
-  const AddCount1 = () => {
+  const AddCount1 = useCallback(() => {
     setCount1((prevCount) => prevCount + 1);
-  };
-  const AddCount2 = () => {
+  }, []);
+  const AddCount2 = useCallback(() => {
     setCount2((prevCount) => prevCount + 1);
-  };
+  }, []);
 
   return (
     // <AppContext.Provider
